@@ -1,0 +1,9 @@
+{% include 'navbar.html' %}
+<h1>Home page template</h1>
+
+{% for room in rooms %}
+    {{room.host.username}}
+    <h3>{{room.id}} -- <a href="{% url 'room' room.id %}" >{{room.Name}} </a></h3>
+    {{room.topic.Name}}
+    <br>
+{% endfor %} 
